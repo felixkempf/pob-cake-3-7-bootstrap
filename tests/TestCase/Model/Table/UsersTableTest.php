@@ -55,6 +55,6 @@ class UsersTableTest extends TestCase
 
     public function testPluginIsBootstrapped(): void
     {
-        $this->assertTrue(Configure::read('Foo.bootstraped'));
+        $this->assertTrue(Configure::read('Foo.bootstraped'), '"Foo" Plugin was not bootstraped. You are missing an additional $this->loadPlugins([\'Foo\']); in the UnitTest');
     }
 }
